@@ -8,7 +8,7 @@ namespace microBoson {
      */
     export enum Motors {
         M1 = 0x00,
-        M2 = 0x01,
+        M2 ,
         ALL 
     }
     /**
@@ -34,19 +34,25 @@ namespace microBoson {
         let buf = pins.createBuffer(3);
         if (index == 0) {
             buf[0] = 0x00;
+            buf[1] = direction;
+            buf[2] = speed;
+            pins.i2cWriteBuffer(address, buf);
         }
         if (index == 1) {
             buf[0] = 0x02;
+            buf[1] = direction;
+            buf[2] = speed;
+            pins.i2cWriteBuffer(address, buf);
         }
         if (index == 2) {
-            buf[0] = 0x04;
+            buf[0] = 0x00;
+            buf[1] = direction;
+            buf[2] = speed;
+            pins.i2cWriteBuffer(0x10, buf);
+            buf[0] = 0x02;
+            pins.i2cWriteBuffer(0x10, buf);
         }
-        if (index == 3) {
-            buf[0] = 0x06;
-        }
-        buf[1] = direction;
-        buf[2] = speed;
-        pins.i2cWriteBuffer(address, buf);
+       
     }
     /**
 	 * Stop the dc motor.
