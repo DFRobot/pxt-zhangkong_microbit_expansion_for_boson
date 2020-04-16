@@ -1,0 +1,7 @@
+{
+    "microBoson.Dir.CW|block": "正转",
+    "microBoson.Dir.CCW|block": "反转",
+    "microBoson.motorRun|block": "电机|%index|方向|%Dir|速度|%speed",
+    "microBoson.motorStop|block": "电机 停止|%index",
+    "microBoson.motorStopAll|block": "停止所有电机"
+}

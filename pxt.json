@@ -1,0 +1,21 @@
+{
+    "name": "zhangkongandmicrobitexpansionforBoson",
+    "version": "0.0.2",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "boson.ts",
+        "_locales/zh/zhangkongandmicrobitexpansionforBoson-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
